@@ -14,9 +14,9 @@ def three_region(input,output,file_version):
     input["5'UTR_total"] = list(map(lambda x:sum(literal_eval(x)),input["5'UTR_length"]))
     input["3'UTR_total"] = list(map(lambda x:sum(literal_eval(x)),input["3'UTR_length"]))
     input["ALL"] = list(map(lambda x,y,z:f'1-{x+y+z}',input["5'UTR_total"],input["3'UTR_total"],input["cds_length"]))
-    input["UTR5"] = list(map(lambda x:'-' if x == 0 else f'1-{x}',input["5'UTR_total"]))
+    input["UTR5"] = list(map(lambda x:'' if x == 0 else f'1-{x}',input["5'UTR_total"]))
     input["CDS"] = list(map(lambda x,y:f'{x+1}-{x+y}',input["5'UTR_total"],input["cds_length"]))
-    input['UTR3'] = list(map(lambda x,y,z: '-' if y == 0 else f'{x+z+1}-{x+y+z}',input["5'UTR_total"],input["3'UTR_total"],input["cds_length"]))
+    input['UTR3'] = list(map(lambda x,y,z: '' if y == 0 else f'{x+z+1}-{x+y+z}',input["5'UTR_total"],input["3'UTR_total"],input["cds_length"]))
     input = input[["ref_id","ALL","UTR5",'CDS',"UTR3"]]
     input.sort_values(by="ref_id",inplace = True)
     input.to_csv(f'{output}/mRNA_{file_version}_3region.csv',index = False)
