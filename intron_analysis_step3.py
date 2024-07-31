@@ -151,4 +151,4 @@ if __name__ =="__main__":
                                 })
     
     transcript_total_table = pd.DataFrame.from_dict(transcript_total)
-    transcript_total_table.to_csv(f'{args.output}/intron_analysis_{args.version}.csv')
+    transcript_total_table.to_csv(f'{args.output}/intron_analysis_{args.file_version}.csv')
