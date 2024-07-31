@@ -78,7 +78,7 @@ if __name__ =='__main__':
         description="This code is to make the reference file for analysis(plot)",
         epilog="This code can be seen as step4, use directly after worm_mRNA.py, three_region.py and intron_analysis.py"
     )
-    parser.add_argument("-i","--input",help="This is argument for the output file of the intron_analysis.py")
+    parser.add_argument("-i","--input",help="This is argument for the output file of the intron_analysis_step3.py")
     parser.add_argument("-f","--file_version",help="This is argument for the version of data")
     parser.add_argument("-o","--output",help="This is argument for the path that save output file")
     parser.add_argument("-t","--type",help="This is argument for the type that output we want to make, include 3region,boundary,IDtoName,length,metagene")
