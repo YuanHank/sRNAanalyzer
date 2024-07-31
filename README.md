@@ -6,7 +6,7 @@ e.g.
   * c_elegans.PRJNA13758.WS290.CDS_transcripts.fa
 
 ### step 1. 整理檔案成.fasta格式與.csv格式
-python worm_mRNA_step1.py --input {輸入檔案, 範例:c_elegans.PRJNA13758.WS285.mRNA_transcripts.fa} --version {wormbase資料版本, 範例:285} --type {檔案為mRNA or CDS, 範例mRNA}
+python worm_mRNA_step1.py --input {輸入檔案, 範例:c_elegans.PRJNA13758.WS285.mRNA_transcripts.fa} --version {wormbase資料版本, 範例:285} --type {檔案為mRNA or CDS, 範例:mRNA}
 
 output : WS285_mRNA.csv, worm_mRNA_285.fasta
 ### step 2. 爬蟲(整理transcript成為.json並存放於資料夾)
